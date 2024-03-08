@@ -1,0 +1,15 @@
+.site{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../assets/mbr-1920x1256.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:auto;
+}
+.site .main{
+    width: 100%;
+    min-height: 100vh;
+}
+.site header, .site footer{
+    flex-basis: 100%;
+}
