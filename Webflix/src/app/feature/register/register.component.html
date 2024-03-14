@@ -1,0 +1,82 @@
+<div class="register">
+    <form #form="ngForm" (ngSubmit)="submitHandler(form)">
+
+        <div class="header">
+            <h3>Register</h3>
+            <app-error-message />
+        </div>
+
+        <div class="fields">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" ngModel #username="ngModel" required minlength="5" />
+                <div class="error" *ngIf="username.touched">
+                    <div *ngIf="username.errors?.['required']">
+                        Username is required!
+                    </div>
+                    <div *ngIf="username.errors?.['minlength'] ">
+                        Username must be more then 5 characters!
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input type="text" name="email" ngModel #email="ngModel" required pattern="{{emailValidatorPattern}}" />
+                <div class="error" *ngIf="email.touched">
+                    <div *ngIf="email.errors?.['required']">
+                        Email is required!
+                    </div>
+                    <div *ngIf="email.errors?.['pattern']">
+                        Invalid email!
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Age</label>
+                <input type="number" name="age" ngModel #age="ngModel" required min="1" max="105"/>
+                <div class="error" *ngIf="age.touched">
+                    <div *ngIf="age.errors?.['required']">
+                        Age is required!
+                    </div>
+                    <div *ngIf="age.errors?.['min'] || age.errors?.['max']">
+                        Age must be between 1 and 105!
+                    </div>
+                </div>
+            </div>
+
+            <ng-container ngModelGroup="passwords" #passwords="ngModelGroup" appAppMatchPasswords   >
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" ngModel #password="ngModel"  required minlength="5" />
+                <div class="error" *ngIf="password.touched">
+                    <div *ngIf="password.errors?.['required']">
+                        Password is required!
+                    </div>
+                    <div *ngIf="password.errors?.['minlength'] ">
+                        Password must be more then 5 characters!
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Repeat Password</label>
+                <input type="password" name="repeatPassword" ngModel #repeatPassword="ngModel"  required    />
+                <div class="error" *ngIf="repeatPassword.touched">
+                    <div *ngIf="repeatPassword.errors?.['required']">
+                        Repeat password is required!
+                    </div>
+                    <div *ngIf="passwords.errors?.['passwordCheck'] && (repeatPassword.dirty || repeatPassword.touched)">
+                        Passwords don't match!
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+            <div class="button">
+                <input type="submit" value="Register" />
+            </div>
+        </div>
+    </form>
+</div>
