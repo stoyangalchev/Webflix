@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="submitHandler(form)">
+    <div class="form">
+        <label for="comment">What is on your mind?</label>
+        <textarea name="comment" id="comment" placeholder="Add your comment here..." ngModel #comment="ngModel" required></textarea>
+        <input type="submit" value="Add comment">
+    </div>
+    
+    <div class="error" *ngIf="comment.touched">
+        <div *ngIf="comment.errors?.['required']">
+            Please enter some text!
+        </div>
+    </div>
+</form>
