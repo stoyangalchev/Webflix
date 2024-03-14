@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommentComponent } from './comment/comment.component';
 import { ModalComponent } from './modal/modal.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -27,14 +28,10 @@ import { ModalComponent } from './modal/modal.component';
     MovieCreateComponent,
     MovieEditComponent,
     CommentComponent,
-    ModalComponent
+    ModalComponent,
+    AboutComponent,
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule,
-    FormsModule
-  ],
+  imports: [CommonModule, SharedModule, RouterModule, FormsModule],
   exports: [
     DashboardComponent,
     HomeComponent,
@@ -45,7 +42,7 @@ import { ModalComponent } from './modal/modal.component';
     MovieDetailsComponent,
     MovieEditComponent,
     CommentComponent,
-    ModalComponent
-  ]
+    ModalComponent,
+  ],
 })
-export class FeatureModule { }
+export class FeatureModule {}
