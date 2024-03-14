@@ -1,0 +1,41 @@
+form{
+    position: relative;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding-top: 2em;
+}
+form .form label{
+    font-size: 2em;
+    padding: 1em 0;
+}
+form .form textarea{
+    resize: none;
+    width: 30em;
+    height: 10em;
+    border: 5px solid #ed0000;
+}
+form .form input{
+    font-size: 1.5em;
+    background-color: black;
+    color: #ed0000;
+    border: 1px solid #ed0000;
+    padding: 1em 2em;
+}
+form .form input:hover{
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+form .error{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -15%;
+    left: 38%;
+    color: red;
+    font-size: 1.2em;
+}
