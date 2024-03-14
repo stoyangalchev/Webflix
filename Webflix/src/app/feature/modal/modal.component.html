@@ -1,0 +1,12 @@
+<ng-container *ngIf="display$ | async as display">
+    <section [class.open]="display === 'open'" (click)="close()">
+        <div (click)="$event.stopPropagation()">
+            <h1>Attention!</h1>
+            <h2>Do you really want to DELETE <span>{{title}}</span>?</h2>
+            <div class="buttons">
+                <button class="close" type="button" (click)="close()">Cancel</button>
+                <button class="close" type="button" (click)="delete()">Delete</button>
+            </div>
+        </div>
+    </section>
+</ng-container>
