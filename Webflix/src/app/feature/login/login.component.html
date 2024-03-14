@@ -1,0 +1,33 @@
+<div class="login">
+    <form #form="ngForm" (ngSubmit)="submitHandler(form)">
+        <div class="header">
+            <h3>Login</h3>
+            <app-error-message/>
+        </div>
+        <div class="fields">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" ngModel   #username="ngModel" required />
+                <div class="error" *ngIf="username.touched">
+                    <div *ngIf="username.errors?.['required']">
+                        Username is required!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" ngModel #password="ngModel" required />
+                <div class="error" *ngIf="password.touched">
+                    <div *ngIf="password.errors?.['required']">
+                        Password is required!
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Login" />
+            </div>
+        </div>
+    </form>
+</div>
+
+
