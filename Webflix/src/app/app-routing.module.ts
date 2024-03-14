@@ -10,6 +10,7 @@ import { MovieEditComponent } from './feature/movie-edit/movie-edit.component';
 import { MyProfileComponent } from './feature/my-profile/my-profile.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
 import { canActivate, canManipulate, canNotActivate } from './core/guards/auth.guard';
+import { AboutComponent } from './feature/about/about.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'movie-details/:id', component: MovieDetailsComponent},
   {path: 'movie-edit/:id', component: MovieEditComponent, canActivate: [canManipulate]},
   {path: 'my-profile', component: MyProfileComponent, canActivate: [canActivate]},
+  {path: 'about' ,component: AboutComponent},
   {path: '404', component: ErrorPageComponent},
   {path: '**', component: ErrorPageComponent}
 ];
