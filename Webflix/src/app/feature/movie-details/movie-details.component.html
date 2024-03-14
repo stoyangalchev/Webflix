@@ -1,0 +1,43 @@
+<app-modal title="{{movie?.title}}" *ngIf="isLoggedIn && isOwner" />
+<div class="movie-details">
+    <h3>Details</h3>
+    <div class="details">
+        <div class="media">
+            <img src="{{movie?.imageUrl}}" alt="{{movie?.title}}">
+        </div>
+        <div class="info">
+            <h4>{{movie?.title}}</h4>
+            <h5>Director: {{movie?.director}} <span>{{movie?.year}}</span></h5>
+            <p>Genre: {{movie?.genre}}</p>
+            <p>Description: {{movie?.plot}}</p>
+            <div class="buttons" *ngIf="isLoggedIn && isOwner">
+                <button (click)="editHandler()">Edit</button>
+                <button (click)="deleteHandler()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+
+        <app-comment *ngIf="isLoggedIn" (commentIsCreated)="getNewComment($event)" />
+
+        <h4>Comments</h4>
+        <h4 *ngIf="!movie?.comments">There are no added comments yet.</h4>
+        <div class="comment-list" *ngIf="movie?.comments">
+            <ul>
+                <li class="comment" *ngFor="let comment of comments">
+                    <div class="comment-author">
+                        <div class="media-author-info">
+                            <div class="media">
+                                <img src="{{comment.userId.imageUrl}}" alt="Profile picture">
+                            </div>
+                            <h5>{{comment.userId.username}}</h5>
+                        </div>
+                        <p>Posted on: {{comment.created_at | date:'medium'}}</p>
+                    </div>
+                    <p>{{comment.text}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>  
