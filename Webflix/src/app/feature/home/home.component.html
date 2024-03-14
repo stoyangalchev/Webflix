@@ -1,0 +1,33 @@
+<div class="home-page">
+    <div class="welcome">
+        <h1>
+            <div class="loader">
+                <p class="text">
+                    WebFlix
+                </p>
+            </div>
+        </h1>
+        <h3>Add your favorite movies and comment with our communite of cinema enthusiast.</h3>
+    </div>
+    <div class="recent-posts">
+        <div class="info">
+            <h3>Recent movies</h3>
+            <a routerLink="/dashboard"><button class="more-moviesbtn">Browse more movies...</button></a>
+        </div>
+        <app-no-movies *ngIf="noMovies" />
+        <app-loading-spinner *ngIf="isLoading" />
+        <ul class="card-list" *ngIf="!noMovies && !isLoading">
+            <li class="card" *ngFor="let movie of movies">
+                <div class="media">
+                    <img src={{movie.imageUrl}} alt="imageUrl">
+                </div>
+                <div class="card-info">
+                    <h3>{{movie.title}}</h3>
+                    <h5>Director: {{movie.director}} | <span>Year: {{movie.year}}</span></h5>
+                    <p>Genre: {{movie.genre}}</p>
+                    <a [routerLink]="['/', 'movie-details', movie._id]">Details</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
