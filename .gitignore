@@ -2,3 +2,9 @@
 .DS_Store
 node_modules/
 .pack
+Webflix/.angular/cache/16.2.12/angular-webpack/326b6ea28346e0e277ee4c2a22228d3e5d7da909/0.pack
+Webflix/.angular/cache/16.2.12/babel-webpack/6c640fc7d3d1317181959b792e9290f60d38c17a03d56b223769ff52cbeb24aa.json
+Webflix/.angular/cache/16.2.12/angular-webpack/326b6ea28346e0e277ee4c2a22228d3e5d7da909/1.pack
+*.json
+Webflix/.angular/cache/16.2.12/angular-webpack/326b6ea28346e0e277ee4c2a22228d3e5d7da909/index.pack
+Webflix/.angular/cache/16.2.12/angular-webpack/326b6ea28346e0e277ee4c2a22228d3e5d7da909/index.pack.old
