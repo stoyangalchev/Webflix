@@ -1,0 +1,76 @@
+<div class="movie-create">
+    <form #form="ngForm" (ngSubmit)="submitHandler(form)">
+        <div class="header">
+            <h3>Create Movie</h3>
+            <app-error-message/>
+        </div>
+        <div class="fields">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="title" ngModel #title="ngModel" required />
+                <div class="error" *ngIf="title.touched">
+                    <div *ngIf="title.errors?.['required']">
+                        Title is required!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Director</label>
+                <input type="text" name="director" ngModel #director="ngModel" required/>
+                <div class="error" *ngIf="director.touched">
+                    <div *ngIf="director.errors?.['required']">
+                        Director is required!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Year</label>
+                <input type="number" name="year" ngModel #year="ngModel" required min="1888"/>
+                <div class="error" *ngIf="year.touched">
+                    <div *ngIf="year.errors?.['required']">
+                        Year is required!
+                    </div>
+                    <div *ngIf="year.errors?.['min']">
+                        First movie was made in 1888. Please enter valid year!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Genre</label>
+                <input type="text" name="genre" ngModel #genre="ngModel" required/>
+                <div class="error" *ngIf="genre.touched">
+                    <div *ngIf="genre.errors?.['required']">
+                        Genre is required!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Image URL</label>
+                <input type="text" name="imageUrl" ngModel #imageUrl="ngModel" required pattern="^https?:\/\/[+\w+\W+]+"/>
+                <div class="error" *ngIf="imageUrl.touched">
+                    <div *ngIf="imageUrl.errors?.['required']">
+                        Image URL is required!
+                    </div>
+                    <div *ngIf="imageUrl.errors?.['pattern']">
+                        Image URL must start with http:// or https://!
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Plot</label>
+                <textarea name="plot" id="plot" cols="21" rows="10" ngModel #plot="ngModel" required minlength="10"></textarea>
+                <div class="error" *ngIf="plot.touched">
+                    <div *ngIf="plot.errors?.['required']" class="error-long">
+                        Plot is required!
+                    </div>
+                    <div *ngIf="plot.errors?.['minlength']" class="error-long">
+                        Plot must be more than 10 characters!
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Create" />
+            </div>
+        </div>
+    </form>
+</div>
