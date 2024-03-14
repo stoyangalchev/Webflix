@@ -1,0 +1,15 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 1em;
+    color: #ed0000;
+}
+.footer h4{
+    margin: 0;
+}
+.footer p{
+    margin: 0;
+}
