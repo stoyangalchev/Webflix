@@ -1,0 +1,85 @@
+.movie-edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0,0.4);
+    height: 100%;
+}
+.movie-edit form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 50em;
+    background-color: rgba(0, 0, 0,0.6);
+    color:#ed0000;
+    min-height: 20em;
+    border-radius: 1em;
+    padding: 1em 1em 1em 0;
+    gap: 2em;
+}
+.movie-edit form .header{
+    position: relative;
+    padding-left: 1em;
+}
+.movie-edit form app-error-message{
+    position: absolute;
+}
+.movie-edit form h3{
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.movie-edit form .fields{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.movie-edit form .fields .field{
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.movie-edit form .fields .field label{
+    font-size: 1.5em;
+}
+.movie-edit form .fields .field input{
+    min-width: 20em;
+    min-height: 2em;
+    border: 2px solid #ed0000;
+    border-radius: 0.5em;
+}
+.movie-edit form .fields .field textarea{
+    resize: none;
+    min-width: 20em;
+    height: 10em;
+    border: 2px solid #ed0000;
+    border-radius: 0.5em;
+}
+.movie-edit form .fields .button input{
+    background-color: black;
+    color: #ed0000;
+    border: 1px solid #ed0000;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+}
+.movie-edit form .fields .button input:hover{
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+.error{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 2.2em;
+    left: 0;
+    color: red;
+}
+.error-long{
+    width: 7em;
+    position: absolute;
+    top: 4em;
+    left: 0;
+}
