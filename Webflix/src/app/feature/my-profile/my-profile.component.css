@@ -1,0 +1,204 @@
+.home-page {
+  background-color: black !important;
+}
+.my-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+.profil-information {
+  align-self: flex-center;
+  display: flex;
+  gap: 3em;
+  padding: 3em;
+  color: #e50914;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.profil-information .info {
+  font-size: 1.4em;
+}
+.my-posts .info {
+  color: #e50914;
+  padding-top: 2em;
+}
+.profil-information .media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-center;
+  gap: 0.5em;
+  width: 15em;
+  overflow: hidden;
+}
+button{
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+
+}
+.profil-information .media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+label {
+  /* Fancy Red button with css  with 3d */
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  margin: -8px;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #e50914;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+}
+
+label:hover {
+  transform: translateY(-2px); /* Move button up when hovered */
+}
+
+label:active {
+  transform: translateY(2px); /* Move button down when clicked */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+}
+.card.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  background-color: none;
+  padding: 0.5em 0 0.5em 0.5em;
+  position: relative;
+  height: 7em;
+}
+.card.card-body input[type="submit"] {
+  background-color: black;
+  color: #e50914;
+  border-radius: 0.5em;
+  border: 1px solid #e50914;
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+}
+.card.card-body input {
+  min-height: 2em;
+  min-width: 15em;
+}
+
+div.collapse {
+  display: none;
+}
+
+#btn-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+#btn-checkbox:checked + div.collapse {
+  display: block;
+}
+
+.recent-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.recent-posts .info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #e50914;
+}
+.recent-posts .info h3 {
+  margin-bottom: 0;
+}
+.recent-posts .info a {
+  text-decoration: none;
+  color: #e50914;
+  font-size: 1.2em;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 140em;
+  justify-content: center;
+  gap: 2em;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25em;
+  background-color: #e50914;
+  border-radius: 20px;
+}
+.card .media {
+  width: 100%;
+  height: 30em;
+  display: flex;
+  margin-bottom: 0.5em;
+  border-radius: 20px;
+}
+.card .media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.card .card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.card .card-info a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 420px;
+  padding: 0.5em 0.3em;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.card .card-info a:hover {
+  color: black;
+  cursor: pointer;
+  background-color: antiquewhite;
+  border-radius: 20px;
+}
+.card .card-info h3 {
+  margin-bottom: 1em;
+  border-radius: 20px;
+}
+
+.error {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 4em;
+  left: 1em;
+  color: rgb(255, 225, 0);
+  width: 15em;
+}
