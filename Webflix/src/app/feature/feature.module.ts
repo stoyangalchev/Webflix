@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import MovieDetailsComponent from './movie-details/movie-details.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
