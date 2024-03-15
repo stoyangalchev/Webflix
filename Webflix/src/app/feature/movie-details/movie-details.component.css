@@ -164,3 +164,14 @@ h3 {
   align-self: flex-end;
   font-size: 1em;
 }
+
+.deleteBtn{
+  background-color: #ed0000;
+  color: white;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  border: 1px solid #ed0000;
+  margin: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+}
