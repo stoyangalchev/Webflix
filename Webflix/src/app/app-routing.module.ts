@@ -5,7 +5,7 @@ import { DashboardComponent } from './feature/dashboard/dashboard.component';
 import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
 import { MovieCreateComponent } from './feature/movie-create/movie-create.component';
-import { MovieDetailsComponent } from './feature/movie-details/movie-details.component';
+import MovieDetailsComponent from './feature/movie-details/movie-details.component';
 import { MovieEditComponent } from './feature/movie-edit/movie-edit.component';
 import { MyProfileComponent } from './feature/my-profile/my-profile.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
