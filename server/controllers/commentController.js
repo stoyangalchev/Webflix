@@ -1,10 +1,17 @@
-const { userModel, themeModel, commentModel, movieModel  } = require('../models/');
+const {
+  userModel,
+  themeModel,
+  commentModel,
+  movieModel,
+} = require("../models/");
 
 function newComment(text, userId, movieId) {
-    return commentModel.create({ text, userId, movieId })
-        .then(comment => {
-            return  movieModel.findByIdAndUpdate({ _id: movieId }, {$push: { comments: comment._id }})   
-        })
+  return commentModel.create({ text, userId, movieId }).then((comment) => {
+    return movieModel.findByIdAndUpdate(
+      { _id: movieId },
+      { $push: { comments: comment._id } }
+    );
+  });
 }
 
 // function getLatestsPosts(req, res, next) {
@@ -21,21 +28,31 @@ function newComment(text, userId, movieId) {
 // }
 
 function createComment(req, res, next) {
-    const { movieId } = req.params;
-    const { _id: userId } = req.user;
-    const { text } = req.body;
+  const { movieId } = req.params;
+  const { _id: userId } = req.user;
+  const { text } = req.body;
 
-    newComment(text, userId, movieId)
-        .then((updatedTheme) => res.status(200).json(updatedTheme))
-        .catch(next);
+  newComment(text, userId, movieId)
+    .then((updatedTheme) => res.status(200).json(updatedTheme))
+    .catch(next);
 }
 
 function getComments(req, res, next) {
-    const { movieId } = req.params;
-    return commentModel.find({movieId: movieId})
+  const { movieId } = req.params;
+  return commentModel
+    .find({ movieId: movieId })
     .populate("userId")
-    .then(comments=> res.status(200).json(comments))
-    .catch(next)
+    .then((comments) => res.status(200).json(comments))
+    .catch(next);
+}
+
+function delComments(req, res, next) {
+   const { commentId } = req.params;
+   console.log(commentId);
+  return commentModel
+    .findByIdAndDelete({ commentId: commentId })
+    .then((comments) => res.status(200).json(comments))
+    .catch(next);
 }
 
 // function editPost(req, res, next) {
@@ -87,11 +104,11 @@ function getComments(req, res, next) {
 // }
 
 module.exports = {
-    // getLatestsPosts,
-    // newPost,
-    createComment,
-    getComments,
-    // editPost,
-    // deletePost,
-    // like,
-}
+  // getLatestsPosts,
+  // newPost,
+  createComment,
+  getComments,
+  // editPost,
+  // deletePost,
+  delComments,
+};
