@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.development';
-import { Movie } from '../../Types/Movie';
-
-
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { environment } from "src/environments/environment.development";
+import { Movie } from "../../Types/Movie";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class MovieService {
   constructor(private http: HttpClient) {}
 
- 
   getMovie(id: string) {
     return this.http.get<Movie>(`${environment.apiUrl}/movies/${id}`);
   }
@@ -20,23 +17,64 @@ export class MovieService {
     return this.http.get<Movie[]>(`${environment.apiUrl}/movies`);
   }
 
-  createMovie(title: string, director: string, year: number, genre: string, imageUrl: string, plot: string) {
-    return this.http.post<Movie>(`${environment.apiUrl}/movies`, { title, director, year, genre, imageUrl, plot });
+  createMovie(
+    title: string,
+    director: string,
+    year: number,
+    genre: string,
+    imageUrl: string,
+    plot: string
+  ) {
+    return this.http.post<Movie>(`${environment.apiUrl}/movies`, {
+      title,
+      director,
+      year,
+      genre,
+      imageUrl,
+      plot,
+    });
   }
 
-  editMovie(title: string, director: string, year: number, genre: string, imageUrl: string, plot: string, movieId:string) {
-    return this.http.post<Movie>(`${environment.apiUrl}/movies/${movieId}/edit`, { title, director, year, genre, imageUrl, plot });
+  editMovie(
+    title: string,
+    director: string,
+    year: number,
+    genre: string,
+    imageUrl: string,
+    plot: string,
+    movieId: string
+  ) {
+    return this.http.post<Movie>(
+      `${environment.apiUrl}/movies/${movieId}/edit`,
+      { title, director, year, genre, imageUrl, plot }
+    );
   }
 
-  deleteMovie(movieId:string) {
-    return this.http.post<Movie>(`${environment.apiUrl}/movies/${movieId}/delete`, {});
+  deleteMovie(movieId: string) {
+    return this.http.delete<Movie>(
+      `${environment.apiUrl}/movies/${movieId}/delete`
+      
+    );
   }
 
+  deleteComment(commentId: any) {
+    console.log(commentId);
+    const token = "YOUR_TOKEN_VALUE"; // Replace "YOUR_TOKEN_VALUE" with the actual token value
+    const headers = new HttpHeaders({
+      Authorization: "Bearer " + token,
+    });
+    return this.http.post<Movie>(
+      `${environment.apiUrl}/movies/${commentId._id}/delete`,
+      {},
+      { headers: headers }
+    );
+  }
 
   getMovieWithLimit(limit?: number) {
-    const limitFilter = limit ? `?limit=${limit}` : '';
+    const limitFilter = limit ? `?limit=${limit}` : "";
 
-    return this.http.get<Movie[]>(`${environment.apiUrl}/movies/latest${limitFilter}`);
+    return this.http.get<Movie[]>(
+      `${environment.apiUrl}/movies/latest${limitFilter}`
+    );
   }
-  
 }
