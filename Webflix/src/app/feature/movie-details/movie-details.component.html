@@ -34,10 +34,11 @@
                             <h5>{{comment.userId.username}}</h5>
                         </div>
                         <p>Posted on: {{comment.created_at | date:'medium'}}</p>
+                        <p class="deleteBtn" (click)="deleteComment(comment)">Delete</p>
                     </div>
                     <p>{{comment.text}}</p>
                 </li>
             </ul>
         </div>
     </div>
-</div>  
+</div>
