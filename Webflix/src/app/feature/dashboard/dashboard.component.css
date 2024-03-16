@@ -23,10 +23,12 @@
 .card-list{
     display: flex;
     flex-wrap: wrap;
-    width: 140em;
+    width: 90%;
     justify-content: center;
     gap: 2em;
    
+    
+
    
 }
 .card{
@@ -36,6 +38,11 @@
     width: 25em;
     background-color: #E50914;
    border-radius: 20px;
+   
+    border: 1px solid #ed0000;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+  margin: 1em auto;
 }
 .card .media{
     width: 100%;
@@ -61,7 +68,7 @@
     display: block;
     text-decoration: none;
     text-align: center;
-    width: 420px;
+    width: 370px;
     padding: 0.5em 0.3em;
     background-color: black;
     color: white;
