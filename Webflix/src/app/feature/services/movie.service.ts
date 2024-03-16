@@ -51,14 +51,14 @@ export class MovieService {
   }
 
   deleteMovie(movieId: string) {
-    return this.http.delete<Movie>(
-      `${environment.apiUrl}/movies/${movieId}/delete`
-      
+    return this.http.post<Movie>(
+      `${environment.apiUrl}/movies/${movieId}/delete`,
+      {}
     );
   }
 
   deleteComment(commentId: any) {
-    console.log(commentId);
+   
     const token = "YOUR_TOKEN_VALUE"; // Replace "YOUR_TOKEN_VALUE" with the actual token value
     const headers = new HttpHeaders({
       Authorization: "Bearer " + token,
