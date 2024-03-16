@@ -11,8 +11,8 @@
     </div>
     <div class="recent-posts">
         <div class="info">
-            <h3>Recent movies</h3>
-            <a routerLink="/dashboard"><button class="more-moviesbtn">Browse more movies...</button></a>
+    <a routerLink="/dashboard"><button class="more-moviesbtn">Browse more movies...</button></a>
+            <h3 class="recentMovieTxt">Recent movies</h3>
         </div>
         <app-no-movies *ngIf="noMovies" />
         <app-loading-spinner *ngIf="isLoading" />
