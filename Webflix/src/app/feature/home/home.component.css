@@ -19,6 +19,13 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  margin-bottom: 5em;
+}
+.recentMovieTxt {
+  color: #e50914;
+  font-size: 5em;
+  font-weight: bold;
+  margin-top: 2px;
 }
 .recent-posts .info {
   display: flex;
@@ -48,7 +55,6 @@
   box-shadow: #e50914 0px 7px 0px 0px;
   transform: translateY(3px);
   transition: 200ms;
-
 }
 
 .more-moviesbtn:active {
@@ -69,22 +75,25 @@
   font-size: 1.2em;
 }
 .card-list {
-
   display: flex;
   flex-wrap: wrap;
-  width: 140em;
+  width: 100%;
   justify-content: center;
-  gap: 2em;
+  gap: 10em;
   border-radius: 20px;
 }
 .card {
-   
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25em;
   border-radius: 20px;
   background-color: #e50914;
+ 
+    border: 1px solid #ed0000;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+  margin: 1em auto;
 }
 .card .media {
   width: 100%;
@@ -110,7 +119,7 @@
   display: block;
   text-decoration: none;
   text-align: center;
-  width: 110%;
+  width: 102%;
   padding: 0.5em 0.3em;
   background-color: black;
   color: white;
@@ -131,9 +140,7 @@
   border-radius: 20px;
 }
 
-
 .loader {
-
   --col1: #b1020b;
   --col2: #b1020b;
   font-size: 3em;
@@ -155,13 +162,11 @@
   translate: -60px 500px;
   width: 5px;
   height: 5px;
-  
 }
 
 .loader::before {
   animation-delay: 3s;
   color: var(--col1);
-  
 }
 
 .loader .text::before {
@@ -183,7 +188,6 @@
   transform: skew(5deg, -5deg);
   -webkit-background-clip: text;
   position: relative;
-  
 }
 
 @keyframes anim {
