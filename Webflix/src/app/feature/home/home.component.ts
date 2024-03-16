@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.movieService.getMovieWithLimit(5).subscribe((movies) => {
+    this.movieService.getMovieWithLimit(3).subscribe((movies) => {
       this.movies = movies;
       this.isLoading = false;
       if (this.movies.length !== 0) {
