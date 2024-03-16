@@ -1,35 +1,46 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em;
-    background-color: black;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  background-color: black;
 }
-.nav-btns{
-    display: flex;
-    gap: 2em;
-}
-
-.nav-btns li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    color: hsl(2, 100%, 50%)
-}
-.nav-btns li a:hover{
-    color:white;
-}
-.logo a{
-    text-decoration: none;
-    color: white;
-    font-size: 2em;
-    font-family: fantasy;
-    letter-spacing: 0.3em;
-}
-.logo a span{
-    color: hsl(2, 100%, 50%)
+.nav-btns {
+  display: flex;
+  gap: 2em;
 }
 
+.nav-btns li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: hsl(2, 100%, 50%);
+  
+  border: 1px solid #ed0000;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  background-color: black;
+  color: white;
+  border: 1px solid #ed0000;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+  margin: 1em auto;
+}
+.nav-btns li a:hover {
+  color: white;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-family: fantasy;
+  letter-spacing: 0.3em;
+}
+.logo a span {
+  color: hsl(2, 100%, 50%);
+}
 
 .button {
   margin: 0;
@@ -43,15 +54,15 @@
 /* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
-  --animation-color: #E50914;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #e50914;
   --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;
   font-size: var(--fs-size);
   font-family: "Arial";
   position: relative;
-  
+
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
@@ -71,5 +82,5 @@
 /* hover */
 .button:hover .hover-text {
   width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
