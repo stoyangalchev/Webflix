@@ -7,7 +7,8 @@
         </div>
         <div class="info">
             <h4>{{movie?.title}}</h4>
-            <h5>Director: {{movie?.director}} <span>{{movie?.year}}</span></h5>
+            <h5>Director: {{movie?.director}} </h5>
+            <p>Year: {{movie?.year}}</p>
             <p>Genre: {{movie?.genre}}</p>
             <p>Description: {{movie?.plot}}</p>
             <div class="buttons" *ngIf="isLoggedIn && isOwner">
