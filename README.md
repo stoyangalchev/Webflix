@@ -17,7 +17,7 @@ For more information read the README.md in folder "server".
 
 ## Home page
 
-Dynamic page with welcome, short description of the Application and 5 recent movies added.
+Dynamic page with welcome, short description of the Application and 3 recent movies added.
 
 ## Movies page
 
