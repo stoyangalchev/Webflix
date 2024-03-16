@@ -17,6 +17,7 @@ export default class MovieDetailsComponent implements OnInit {
   movieId = this.route.snapshot.params["id"];
   isLoggedIn: boolean = false;
   isOwner: boolean = false;
+  userId: string | undefined = "";
 
   constructor(
     private movieService: MovieService,
@@ -33,6 +34,7 @@ export default class MovieDetailsComponent implements OnInit {
       this.comments = movie.comments;
       this.userService.user$.subscribe((user) => {
         if (user) {
+          this.userId = user._id;
           this.isLoggedIn = true;
           if (this.movie?.ownerId === user?._id) {
             this.isOwner = true;
@@ -42,11 +44,15 @@ export default class MovieDetailsComponent implements OnInit {
     });
   }
 
+  isCommentOwner(comment: any): boolean | undefined {
+   
+    return comment.userId._id === this.userId;
+  }
+
   getNewComment(comments: any) {
     this.comments = comments;
   }
 
- 
   deleteHandler(): void {
     console.log("Deleted movie");
     this.movieService.deleteMovie(this.movieId).subscribe(
