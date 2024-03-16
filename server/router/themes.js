@@ -14,7 +14,7 @@ router.get("/latest", movieController.getLatestsMovies);
 router.post("/", auth(), movieController.createMovie);
 
 router.get("/:movieId", movieController.getMovie);
-router.post("/:movieId/delete", auth(), movieController.deleteMovie);
+router.post("/:movieId/delete",  movieController.deleteMovie);
 router.post("/:movieId/edit", auth(), movieController.editMovie);
 router.post("/:movieId/comments", auth(), commentController.createComment);
 router.get("/:movieId/comments", commentController.getComments);
