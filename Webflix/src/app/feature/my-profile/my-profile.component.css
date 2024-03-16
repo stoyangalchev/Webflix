@@ -139,6 +139,7 @@ div.collapse {
   width: 140em;
   justify-content: center;
   gap: 2em;
+  margin-bottom: 5em;
 }
 .card {
   display: flex;
@@ -146,7 +147,11 @@ div.collapse {
   align-items: center;
   width: 25em;
   background-color: #e50914;
-  border-radius: 20px;
+
+  border: 1px solid #ed0000;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+ 
 }
 .card .media {
   width: 100%;
@@ -172,7 +177,7 @@ div.collapse {
   display: block;
   text-decoration: none;
   text-align: center;
-  width: 420px;
+  width: 350px;
   padding: 0.5em 0.3em;
   background-color: black;
   color: white;
