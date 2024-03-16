@@ -79,7 +79,6 @@ function editMovie(req, res, next) {
 
 function deleteMovie(req, res, next) {
   const { movieId } = req.params;
- console.log(movieId)
 
   movieModel
     .findByIdAndDelete(movieId)
