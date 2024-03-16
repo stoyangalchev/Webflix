@@ -4,6 +4,7 @@ import { Movie } from "src/app/Types/Movie";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ModalService } from "../services/modal.service";
 import { UserService } from "../services/user.service";
+import { CommentService } from "../services/comment.service";
 
 @Component({
   selector: "app-movie-details",
@@ -17,15 +18,18 @@ export default class MovieDetailsComponent implements OnInit {
   isLoggedIn: boolean = false;
   isOwner: boolean = false;
 
+
   constructor(
     private movieService: MovieService,
     private route: ActivatedRoute,
     private modalService: ModalService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private commentService: CommentService
   ) {}
 
   ngOnInit(): void {
+    console.log(this.isOwner);
     this.movieService.getMovie(this.movieId).subscribe((movie) => {
       this.movie = movie;
       this.comments = movie.comments;
@@ -54,12 +58,19 @@ export default class MovieDetailsComponent implements OnInit {
     });
   }
 
-  deleteComment(commentId: string): void {
+  deleteComment(comments: any): void {
+    console.log("id" + " " + comments._id);
+    this.commentService.deletesComment(comments._id).subscribe(
+      (response) => {
+        console.log("Comment deleted", response);
 
-  
-    this.movieService.deleteComment(commentId).subscribe((data) => {
-      console.log("Comment deleted");
-      console.log(data);
-    });
+        this.comments = this.comments.filter(
+          (comment: any) => comment._id !== comments._id
+        );
+      },
+      (error) => {
+        console.error("Error deleting comment", error);
+      }
+    );
   }
 }

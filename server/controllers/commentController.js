@@ -47,10 +47,10 @@ function getComments(req, res, next) {
 }
 
 function delComments(req, res, next) {
-   const { commentId } = req.params;
-   console.log(commentId);
+  const { commentId } = req.params;
+  console.log(commentId);
   return commentModel
-    .findByIdAndDelete({ commentId: commentId })
+    .findByIdAndDelete(commentId, {})
     .then((comments) => res.status(200).json(comments))
     .catch(next);
 }

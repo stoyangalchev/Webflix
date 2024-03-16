@@ -18,7 +18,7 @@ router.post("/:movieId/delete", auth(), movieController.deleteMovie);
 router.post("/:movieId/edit", auth(), movieController.editMovie);
 router.post("/:movieId/comments", auth(), commentController.createComment);
 router.get("/:movieId/comments", commentController.getComments);
-router.delete("/:commentId/delete", auth(), commentController.delComments);
+router.delete("/:commentId/delete", commentController.delComments);
 router.put("/:movieId/comments/:postId", auth(), postController.editPost);
 router.delete("/:themeId/posts/:postId", auth(), postController.deletePost);
 
