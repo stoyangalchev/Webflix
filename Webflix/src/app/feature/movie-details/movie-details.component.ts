@@ -32,6 +32,7 @@ export default class MovieDetailsComponent implements OnInit {
     this.movieService.getMovie(this.movieId).subscribe((movie) => {
       this.movie = movie;
       this.comments = movie.comments;
+      
       this.userService.user$.subscribe((user) => {
         if (user) {
           this.userId = user._id;
@@ -43,6 +44,16 @@ export default class MovieDetailsComponent implements OnInit {
       });
     });
   }
+   ngAfterViewInit() {
+    this.commentService.getComments(this.movieId).subscribe(
+      (comments) => {
+        this.comments = comments;
+      },
+      (error) => {
+        console.error('Error fetching comments', error);
+      }
+    );
+  }
 
   isCommentOwner(comment: any): boolean | undefined {
    
@@ -50,6 +61,7 @@ export default class MovieDetailsComponent implements OnInit {
   }
 
   getNewComment(comments: any) {
+  
     this.comments = comments;
   }
 
