@@ -1,7 +1,3 @@
-# Webflix-Angular
- Angular project
-
-
 
 # Webflix
 
