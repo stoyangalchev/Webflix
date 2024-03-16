@@ -28,7 +28,6 @@ export default class MovieDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
     this.movieService.getMovie(this.movieId).subscribe((movie) => {
       this.movie = movie;
       this.comments = movie.comments;
@@ -47,12 +46,9 @@ export default class MovieDetailsComponent implements OnInit {
     this.comments = comments;
   }
 
-  // deleteHandler(): void {
-  //   this.modalService.open();
-  // }
+ 
   deleteHandler(): void {
-    console.log("Delete movie");
-    
+    console.log("Deleted movie");
     this.movieService.deleteMovie(this.movieId).subscribe(
       () => {
         this.modalService.open();
@@ -71,7 +67,6 @@ export default class MovieDetailsComponent implements OnInit {
   }
 
   deleteComment(comments: any): void {
-    
     this.commentService.deletesComment(comments._id).subscribe(
       (response) => {
         console.log("Comment deleted", response);
