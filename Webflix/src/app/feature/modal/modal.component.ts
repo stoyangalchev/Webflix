@@ -17,6 +17,7 @@ export class ModalComponent {
   constructor(private modalService: ModalService, private movieService: MovieService, private router: Router,private route: ActivatedRoute) {}
 
   ngOnInit() {
+    
     this.display$ = this.modalService.watch();
   }
 
