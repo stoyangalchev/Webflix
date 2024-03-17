@@ -1,12 +1,8 @@
-# Webflix-Angular
- Angular project
-
-# Angular-Project
 
 # Webflix
 
 Webflix is a Single Page Application about sharing favorite movies and comment it.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16
 
 ## Development server
 
@@ -21,7 +17,7 @@ For more information read the README.md in folder "server".
 
 ## Home page
 
-Dynamic page with welcome, short description of the Application and 5 recent movies added.
+Dynamic page with welcome, short description of the Application and 3 recent movies added.
 
 ## Movies page
 
