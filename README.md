@@ -1,9 +1,12 @@
-
 # Webflix
 
 Webflix is a Single Page Application about sharing favorite movies and comment it.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16
 
+# Deployed With GitHub Pages
+.................................................................
+###### CLICK HERE --> 'https://stoyangalchev.github.io/Webflix/'
+.................................................................
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
@@ -33,6 +36,7 @@ Guest can login with username and password.
 Guest can register with username, email, age and password. Required to repeat the password for validation.
 
 ## About Page
+
 Instruction to use the Application .
 
 ## Add Movie page
