@@ -64,6 +64,6 @@ section {
     padding: 0;
   }
   >div h2 span{
-    color: red;
+    color: rgb(2, 0, 0);
   }
 }
