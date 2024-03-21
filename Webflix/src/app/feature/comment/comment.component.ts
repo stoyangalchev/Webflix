@@ -36,6 +36,7 @@ export class CommentComponent{
       })
     )
     .subscribe((comments)=>{
+ 
         this.commentIsCreated.emit(comments)
     });
 
