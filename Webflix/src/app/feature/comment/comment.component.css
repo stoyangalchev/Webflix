@@ -1,41 +1,81 @@
-form{
+/* Apply a gradient background to the entire form */
+form {
     position: relative;
+    background: linear-gradient(135deg, #0e0e0e, #202020);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.form{
+
+/* Style the container for form elements */
+.form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-    padding-top: 2em;
+    flex-direction: column;
+    gap: 2em;
 }
-form .form label{
-    font-size: 2em;
-    padding: 1em 0;
-}
-form .form textarea{
-    resize: none;
-    width: 30em;
-    height: 10em;
-    border: 5px solid #ed0000;
-}
-form .form input{
-    font-size: 1.5em;
-    background-color: black;
+
+/* Style labels */
+form .form label {
+    font-size: 2.2em;
     color: #ed0000;
-    border: 1px solid #ed0000;
-    padding: 1em 2em;
+    font-family: 'Arial', sans-serif;
 }
-form .form input:hover{
-    color: white;
-    border-color: white;
+
+/* Style textareas */
+form .form textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: 2px solid #ed0000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style input fields */
+form .form input {
+    font-size: 1em;
+    background-color: #333;
+    color: #ed0000;
+    border: 2px solid #ed0000;
+    border-radius: 5px;
+    padding: 0.8em 1.2em;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Style input fields on hover */
+form .form input:hover {
+    color: #fff;
+    background-color: #ed0000;
     cursor: pointer;
 }
-form .error{
+
+/* Error message styling */
+form .error {
     margin: 0;
     padding: 0;
-    position: absolute;
-    bottom: -15%;
-    left: 38%;
     color: red;
-    font-size: 1.2em;
+    font-size: 0.9em;
+}
+
+/* Additional styles for submit button */
+form .form button {
+    font-size: 1em;
+    background-color: #ed0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8em 1.5em;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style submit button on hover */
+form .form button:hover {
+    background-color: #c30000;
 }
