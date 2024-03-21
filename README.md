@@ -20,11 +20,11 @@ For more information read the README.md in folder "server".
 
 ## Home page
 
-Dynamic page with welcome, short description of the Application and 3 recent movies added.
+Dynamic page with app title, short description of the Application and 3 recent movies added.
 
 ## Movies page
 
-Movie page is the collection of all created movies by the users. Contains breef information
+Dynamic page with  collection of all created movies by the users. Contains breef information
 about every movie and a Details button for more information about the chosen movie.
 
 ## Login page
@@ -38,6 +38,11 @@ Guest can register with username, email, age and password. Required to repeat th
 ## About Page
 
 Instruction to use the Application .
+
+## Profile Page
+
+Dinamic page with profile image, user details  and movies aded by current user.
+
 
 ## Add Movie page
 
