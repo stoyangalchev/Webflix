@@ -32,7 +32,7 @@ export default class MovieDetailsComponent implements OnInit {
     this.movieService.getMovie(this.movieId).subscribe((movie) => {
       this.movie = movie;
       this.comments = movie.comments;
-      
+
       this.userService.user$.subscribe((user) => {
         if (user) {
           this.userId = user._id;
@@ -44,38 +44,28 @@ export default class MovieDetailsComponent implements OnInit {
       });
     });
   }
-   ngAfterViewInit() {
+  ngAfterViewInit() {
     this.commentService.getComments(this.movieId).subscribe(
       (comments) => {
         this.comments = comments;
       },
-      (error) => {
-        console.error('Error fetching comments', error);
+      function (error) {
+        console.error("Error fetching comments", error);
       }
     );
   }
 
   isCommentOwner(comment: any): boolean | undefined {
-   
     return comment.userId._id === this.userId;
   }
 
   getNewComment(comments: any) {
-  
     this.comments = comments;
   }
 
+ 
   deleteHandler(): void {
-    console.log("Deleted movie");
-    this.movieService.deleteMovie(this.movieId).subscribe(
-      () => {
-        this.modalService.open();
-        // Navigate to another page or refresh the current page
-      },
-      (error) => {
-        console.error("Error deleting movie", error);
-      }
-    );
+    this.modalService.open();
   }
 
   editHandler(): void {
