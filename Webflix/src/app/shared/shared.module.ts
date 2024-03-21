@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { NoMoviesComponent } from './no-movies/no-movies.component';
-import { ErrorMessageComponent } from './error-message/error-message.component';
-import { AppMatchPasswordsDirective } from './directives/app-match-passwords.directive';
-
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
+import { NoMoviesComponent } from "./no-movies/no-movies.component";
+import { ErrorMessageComponent } from "./error-message/error-message.component";
+import { AppMatchPasswordsDirective } from "./directives/app-match-passwords.directive";
 
 
 @NgModule({
@@ -12,16 +11,14 @@ import { AppMatchPasswordsDirective } from './directives/app-match-passwords.dir
     LoadingSpinnerComponent,
     NoMoviesComponent,
     ErrorMessageComponent,
-    AppMatchPasswordsDirective
+    AppMatchPasswordsDirective,
   ],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [
     LoadingSpinnerComponent,
     NoMoviesComponent,
     ErrorMessageComponent,
-    AppMatchPasswordsDirective
-  ]
+    AppMatchPasswordsDirective,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
