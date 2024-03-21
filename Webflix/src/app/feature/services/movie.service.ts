@@ -58,7 +58,7 @@ export class MovieService {
   }
 
   deleteComment(commentId: any) {
-    const token = "YOUR_TOKEN_VALUE"; // Replace "YOUR_TOKEN_VALUE" with the actual token value
+    const token = "YOUR_TOKEN_VALUE"; 
     const headers = new HttpHeaders({
       Authorization: "Bearer " + token,
     });
