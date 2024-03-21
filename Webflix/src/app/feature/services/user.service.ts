@@ -57,8 +57,9 @@ export class UserService implements OnDestroy {
   logout() {
     return this.http.post<User>(`${environment.apiUrl}/logout`, {}).pipe(
       tap(() => {
+        sessionStorage.clear();
+        
         this.user$$.next(undefined);
-        sessionStorage.removeItem("user");
       })
     );
   }

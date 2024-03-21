@@ -4,3 +4,9 @@ node_modules/
 
 *.pack
 *.pack
+*.pack
+*.json
+*.old
+*.pack
+*.pack
+*.pack
