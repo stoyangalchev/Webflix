@@ -32,7 +32,7 @@ export class UserService implements OnDestroy {
       .pipe(
         tap((user) => {
           this.user$$.next(user);
-          sessionStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("user", JSON.stringify(user));
         })
       );
   }
@@ -57,7 +57,7 @@ export class UserService implements OnDestroy {
   logout() {
     return this.http.post<User>(`${environment.apiUrl}/logout`, {}).pipe(
       tap(() => {
-        sessionStorage.clear();
+        localStorage.clear();
         
         this.user$$.next(undefined);
       })
