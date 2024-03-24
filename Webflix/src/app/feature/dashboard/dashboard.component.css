@@ -9,7 +9,9 @@
     height: 100%;
     
 }
+
 .recent-posts .info{
+    
     display: flex;
     justify-content: center;
     width: 100%;
@@ -89,3 +91,19 @@
     margin-bottom: 1em;
    border-radius: 20px;
 }
+
+.recentMovieTxt {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 8em;
+  font-weight: bold;
+  margin-top: -50px;
+  margin-bottom: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(#e50914, #f00000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+
+}
+
