@@ -36,6 +36,7 @@ export class ModalComponent {
       () => {
         console.log("Deleted movie");
         this.modalService.close();
+        this.router.navigate(["/my-profile"]);
       },
       (error) => {
         console.error("Error deleting movie", error);
