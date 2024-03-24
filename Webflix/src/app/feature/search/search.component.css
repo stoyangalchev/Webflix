@@ -74,14 +74,12 @@ button:active {
 }
 .recentMovieTxt {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 5em;
+  font-size: 8em;
   font-weight: bold;
   margin-top: 2px;
   margin-bottom: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transform: perspective(100px) rotateX(20deg);
   background: -webkit-linear-gradient(#e50914, #f00000);
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -286,11 +284,11 @@ button:active {
 .info {
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4) !important;
-
+  background-color: rgba(0, 0, 0, 0.7) !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: -10px;
 }
 
 .recentMovieTxt {
