@@ -20,9 +20,8 @@ export class SearchComponent {
     if (!query) {
       return;
     }
-    const searchMovies$ = this.movieService.searchMovies(query);
-    searchMovies$.subscribe(
-      (movies: any) => {
+    this.movieService.searchMovies(query).subscribe(
+      (movies) => {
         console.log("Search results:", movies);
         this.movies = movies;
         this.isLoading = false;
@@ -31,7 +30,7 @@ export class SearchComponent {
         }
         form.reset();
       },
-      (error: any) => {
+      (error) => {
         console.error("Error occurred:", error);
       }
     );
