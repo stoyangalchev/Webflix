@@ -9,7 +9,7 @@ const { authController } = require('../controllers');
 router.post('/register', authController.register);
 router.post('/login', authController.login);
 router.post('/logout', authController.logout);
-
+router.get("/search/:query", authController.search);
 router.use('/users', users);
 router.use('/movies', themes);
 router.use('/posts', posts);
