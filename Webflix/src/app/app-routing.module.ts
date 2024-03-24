@@ -11,10 +11,12 @@ import { MyProfileComponent } from './feature/my-profile/my-profile.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
 import { canActivate, canManipulate, canNotActivate } from './core/guards/auth.guard';
 import { AboutComponent } from './feature/about/about.component';
+import { SearchComponent } from './feature/search/search.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
+  {path: 'search', component: SearchComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'login', component: LoginComponent, canActivate: [canNotActivate]},
   {path: 'register', component: RegisterComponent, canActivate: [canNotActivate]},
