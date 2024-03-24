@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { environment } from "src/environments/environment.development";
+import { Observable } from "rxjs";
 import { Movie } from "../../Types/Movie";
 
 @Injectable({
@@ -58,7 +59,7 @@ export class MovieService {
   }
 
   deleteComment(commentId: any) {
-    const token = "YOUR_TOKEN_VALUE"; 
+    const token = "YOUR_TOKEN_VALUE"; // Replace "YOUR_TOKEN_VALUE" with the actual token value
     const headers = new HttpHeaders({
       Authorization: "Bearer " + token,
     });
@@ -75,5 +76,11 @@ export class MovieService {
     return this.http.get<Movie[]>(
       `${environment.apiUrl}/movies/latest${limitFilter}`
     );
+  }
+
+  searchMovies(query: string): Observable<any> {
+    console.log(query);
+
+    return this.http.get(`${environment.apiUrl}/search/${query}`);
   }
 }
