@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class ModalComponent {
   @Input() title: string | undefined;
+
   display$: Observable<string> | undefined;
   movieId = this.route.snapshot.params["id"];
 
@@ -22,14 +23,13 @@ export class ModalComponent {
   ) {}
 
   ngOnInit() {
+    console.log(this.title);
     this.display$ = this.modalService.watch();
   }
 
   close() {
     this.modalService.close();
   }
-
-
 
   delete() {
     this.movieService.deleteMovie(this.movieId).subscribe(
