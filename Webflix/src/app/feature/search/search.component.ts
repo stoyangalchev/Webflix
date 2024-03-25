@@ -12,6 +12,7 @@ export class SearchComponent {
   movies: any;
   noMovies = true;
   isLoading = true;
+  toggleNoMovies = false;
   constructor(private movieService: MovieService) {}
 
   onSearch(form: NgForm): void {
@@ -27,6 +28,9 @@ export class SearchComponent {
         this.isLoading = false;
         if (this.movies.length !== 0) {
           this.noMovies = false;
+        } else {
+          this.noMovies = true;
+          this.toggleNoMovies = true;
         }
         form.reset();
       },
