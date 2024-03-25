@@ -9,6 +9,9 @@
   position: relative;
   margin: 0 auto;
   margin-top: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .searchButton {
@@ -27,18 +30,18 @@
   display: inline-block;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-.searchInput {
-  width: 650px; /* Full width */
-  color: #000; /* Default color */
-  background-color: #720000; /* White background */
-  font-size: 16px; /* Increased font size */
-  padding: 12px 20px; /* Large padding */
-  border: 1px solid #7b0000; /* Grey border */
-  border-radius: 5px; /* Rounded borders */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Shadow */
-  transition: 0.3s; /* Transition of 0.3 seconds */
-  box-sizing: border-box;
 
+.searchInput {
+  width: 650px; 
+  color: #000;
+  background-color: #720000; 
+  font-size: 16px; 
+  padding: 12px 20px; 
+  border: 1px solid #7b0000; 
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s; 
+  box-sizing: border-box;
 }
 
 .searchInput:focus {
@@ -46,16 +49,15 @@
   color: #ffffff;
   border: 1px solid #e50914;
   box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
-  
 }
-/*hover effect*/
+
 button:hover {
   color: #fff;
   background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
   transform: translateY(-3px);
 }
-/*button pressing effect*/
+
 button:active {
   box-shadow: none;
   transform: translateY(0);
@@ -139,7 +141,7 @@ button:active {
 
 .more-moviesbtn:active {
   background-color: #e50914;
-  /*50, 168, 80*/
+
   box-shadow: #e50914(2, 100%, 50%, 0.577) 0px 0px 0px 0px;
   transform: translateY(5px);
   transition: 200ms;
@@ -208,11 +210,12 @@ button:active {
   letter-spacing: 0.2em;
   font-weight: bold;
   border-radius: 10px;
+ 
 }
+
 .card .card-info a:hover {
   color: black;
   cursor: pointer;
-
   background-color: antiquewhite;
 }
 .card .card-info h3 {
@@ -314,4 +317,23 @@ button:active {
 
 .recentMovieTxt {
   text-align: center;
+}
+
+.no-movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100h;
+  color: #a30008;
+  font-size: 10em;
+  font-weight: bold !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  border: 5px solid #a30008; 
+  border-radius: 15px; 
+  padding: 20px; 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
+  transition: all 0.5s ease;
 }
