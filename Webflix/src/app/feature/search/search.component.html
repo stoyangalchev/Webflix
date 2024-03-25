@@ -59,9 +59,11 @@
                 <h3>{{movie.title}}</h3>
                 <h5>Director: {{movie.director}} | <span>Year: {{movie.year}}</span></h5>
                 <p>Genre: {{movie.genre}}</p>
-                <a [routerLink]="['/', 'movie-details', movie._id]">Details</a>
+                <a  [routerLink]="['/', 'movie-details', movie._id]">Details</a>
             </div>
         </li>
     </ul>
-    <p class="no-movies" *ngIf="noMovies && toggleNoMovies">No movies found</p>
+
+        <p class="no-movies" *ngIf="noMovies && toggleNoMovies">No movies found</p>
+  
 </div>
