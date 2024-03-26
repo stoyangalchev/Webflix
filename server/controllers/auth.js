@@ -78,24 +78,26 @@ function login(req, res, next) {
     .catch(next);
 }
 
-function logout(req, res) {
-  const token = req.cookies[authCookieName];
+// function logout(req, res) {
+//   const token = req.cookies[authCookieName];
 
-  tokenBlacklistModel
-    .create({ token })
-    .then(() => {
-      res
-        .clearCookie(authCookieName)
-        .status(204)
-        .send({ message: "Logged out!" });
-    })
-    .catch((err) => res.send(err));
+//   tokenBlacklistModel
+//     .create({ token })
+//     .then(() => {
+//       res
+//         .clearCookie(authCookieName)
+//         .status(204)
+//         .send({ message: "Logged out!" });
+//     })
+//     .catch((err) => res.send(err));
+// }
+function logout(req, res) {
+  res.clearCookie(authCookieName).status(204).send({ message: "Logged out!" });
 }
 
 function getProfileInfo(req, res, next) {
   const { _id: userId } = req.user;
 
-  //finding by Id and returning without password and __v
 
   userModel
     .findOne({ _id: userId }, { password: 0, __v: 0 })
