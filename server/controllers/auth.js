@@ -66,12 +66,13 @@ function login(req, res, next) {
 
       if (process.env.NODE_ENV === "production") {
         res.cookie(authCookieName, token, {
+          maxAge: 900000,
           httpOnly: true,
           sameSite: "none",
           secure: true,
         });
       } else {
-        res.cookie(authCookieName, token, { httpOnly: true });
+        res.cookie(authCookieName, token, { httpOnly: true, maxAge: 900000 });
       }
       res.status(200).send(user);
     })
@@ -97,7 +98,6 @@ function logout(req, res) {
 
 function getProfileInfo(req, res, next) {
   const { _id: userId } = req.user;
-
 
   userModel
     .findOne({ _id: userId }, { password: 0, __v: 0 })
