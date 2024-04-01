@@ -19,10 +19,7 @@
 .profil-information .info {
   font-size: 1.4em;
 }
-.my-posts .info {
-  color: #e50914;
-  padding-top: 2em;
-}
+
 .profil-information .media {
   display: flex;
   flex-direction: column;
@@ -31,7 +28,7 @@
   width: 15em;
   overflow: hidden;
 }
-button{
+button {
   background-color: #e50914;
   color: white;
   border: none;
@@ -42,7 +39,6 @@ button{
   position: relative;
   overflow: hidden;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
-
 }
 .profil-information .media img {
   display: block;
@@ -128,6 +124,7 @@ div.collapse {
 .recent-posts .info h3 {
   margin-bottom: 0;
 }
+
 .recent-posts .info a {
   text-decoration: none;
   color: #e50914;
@@ -136,7 +133,7 @@ div.collapse {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  width: 140em;
+  width: 100%;
   justify-content: center;
   gap: 2em;
   margin-bottom: 5em;
@@ -151,7 +148,6 @@ div.collapse {
   border: 1px solid #ed0000;
   border-radius: 1em;
   box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
- 
 }
 .card .media {
   width: 100%;
@@ -206,4 +202,39 @@ div.collapse {
   left: 1em;
   color: rgb(255, 225, 0);
   width: 15em;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+div.my-posts .info {
+  color: #9b0008;
+  text-align: center;
+  font-size: 50px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  animation: pulse 2s infinite;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
 }
