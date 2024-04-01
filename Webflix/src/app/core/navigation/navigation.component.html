@@ -14,8 +14,8 @@
             <li><a routerLink="/home">Home</a></li>
             <li><a routerLink="/search">Search</a></li>
             <li><a routerLink="/dashboard">Movies</a></li>
-            <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/movie-create" *ngIf="isLoggedIn">Add Movie</a></li>
+            <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
             <li><a routerLink="/register" *ngIf="!isLoggedIn">Register</a></li>
             <li><a routerLink="/home" (click)="logoutHandler()" *ngIf="isLoggedIn">Logout</a></li>
