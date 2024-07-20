@@ -84,8 +84,8 @@
 @media screen and (max-width: 900px) {
     .register {
         
-        font-size: 1em;
-        padding: 20px;
+        font-size: 0.8em;
+        padding: 10px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -122,11 +122,13 @@
     .register .error {
         font-size: 0.9em;
         color: red;
+        padding: 5px;
     }
 
     .register .button {
-        width: 100%;
+        width: 80%;
         text-align: center;
+        margin-right: 20px;
     }
 
     .register .button input {

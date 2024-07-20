@@ -99,12 +99,14 @@
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
     input {
-            width: 30%;
+            font-size: 0.8rem;
+            margin-left: -100px
         }
     
         .button {
             width: 100%;
+            margin-left: 60%;
         }
 }

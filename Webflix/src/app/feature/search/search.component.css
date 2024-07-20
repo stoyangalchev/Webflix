@@ -1,3 +1,6 @@
+.html{
+  overflow: hidden;
+}
 .searchBox {
   display: flex;
   max-width: 730px;
@@ -210,7 +213,7 @@ button:active {
   display: block;
   text-decoration: none;
   text-align: center;
-  width: 102%;
+  width: 100%;
   padding: 0.5em 0.3em;
   background-color: black;
   color: white;
@@ -351,21 +354,19 @@ button:active {
   transition: all 0.5s ease;
 }
 
-@media screen and (max-width: 900px) {
-  .searchInput {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
-
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    box-sizing: border-box;
-  }
+@media screen and (max-width: 500px) {
+    .searchBox {
+      width: 100%;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .searchInput {
+      width: 100%;
+    }
 
   .recentMovieTxt {
 
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
     margin-top: 2px;
   }

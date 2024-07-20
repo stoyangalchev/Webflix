@@ -5,7 +5,7 @@ Let's make our first API request to the REST-api!
 
 In the example below, we're trying to get information about the REST-api:
 
-```https://localhost:3000/api/test```
+```https://localhost:3001/api/test```
 
 Here is the response we get:
 
@@ -25,7 +25,7 @@ The Base URL is the root URL for all of the API, if you ever make a request to t
 
 The Base URL for the API is:
 
-```https://localhost:3000/api```
+```https://localhost:3001/api```
 
 The documentation below assumes you are prepending the Base URL to the endpoints in order to make requests.
 

@@ -13,3 +13,8 @@
 .site header, .site footer{
     flex-basis: 100%;
 }
+
+html,
+body {
+    overflow-x: hidden;
+}

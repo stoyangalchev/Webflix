@@ -114,8 +114,8 @@
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
     .recentMovieTxt {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 }

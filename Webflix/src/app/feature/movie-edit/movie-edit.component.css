@@ -97,9 +97,39 @@
     left: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
+.movie-edit form{
+    min-width: 90em;
+    min-height: 30em;
+    gap: 1em;
+ margin-top: -200px;
+}
+
+    .movie-edit form h3 {
+        font-size: 2em;
+    }
+
+    .movie-edit form .fields .field label {
+        font-size: 1em;
+    }
+
+    .movie-edit form .fields .field input {
+        min-width: 10em;
+        min-height: 1em;
+    }
+
+    .movie-edit form .fields .field textarea {
+        min-width: 10em;
+        height: 5em;
+    }
+
+    .movie-edit form .fields .button input {
+        padding: 00em;
+        font-size: 1em;
+}
+
 
     input {
-        width: 30%;
+        width: 50%;
     }
 }

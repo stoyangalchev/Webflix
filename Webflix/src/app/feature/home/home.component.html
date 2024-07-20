@@ -14,7 +14,7 @@
     <a routerLink="/dashboard"><button class="more-moviesbtn">Browse more movies...</button></a>
             <h3 class="recentMovieTxt">Recent movies</h3>
         </div>
-        <app-no-movies *ngIf="noMovies" />
+        <app-no-movies *ngIf="noMovies" class="nomivje" />
         <app-loading-spinner *ngIf="isLoading" />
         <ul class="card-list" *ngIf="!noMovies && !isLoading">
             <li class="card" *ngFor="let movie of movies">

@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 
 html{
     box-sizing: border-box;
     font: 14px/1.5 Arial, sans-serif;
+        background-color: black;
 }
 
 *, *::before,*::after{
