@@ -10,7 +10,7 @@
             <h5>Director: {{movie?.director}} </h5>
             <p>Year: {{movie?.year}}</p>
             <p>Genre: {{movie?.genre}}</p>
-            <p>Description: {{movie?.plot}}</p>
+            <p class="description">Description: {{movie?.plot}}</p>
             <div class="buttons" *ngIf="isLoggedIn && isOwner">
                 <button (click)="editHandler()">Edit</button>
                 <button (click)="deleteHandler()">Delete</button>
@@ -22,7 +22,7 @@
 
         <app-comment *ngIf="isLoggedIn" (commentIsCreated)="getNewComment($event)" />
 
-        <h4>Comments</h4>
+        <h4 class="comenttitle1">Comments</h4>
         <h4 *ngIf="!movie?.comments">There are no added comments yet.</h4>
         <div class="comment-list" *ngIf="movie?.comments">
             <ul>
@@ -32,13 +32,13 @@
                             <div class="media">
                                 <img src="{{comment.userId.imageUrl}}" alt="Profile picture">
                             </div>
-                            <h5>{{comment.userId.username}}</h5>
+                            <h5 class="usernamecomment">{{comment.userId.username}}</h5>
                         </div>
-                        <p>Posted on: {{comment.created_at | date:'medium'}}</p>
+                        <p class="datepost">Posted on: {{comment.created_at | date:'medium'}}</p>
                         <p *ngIf="isCommentOwner(comment)" class="deleteBtn" (click)="deleteComment(comment)"> Delete
                         </p>
                     </div>
-                    <p>{{comment.text}}</p>
+                    <p class="comenttext">{{comment.text}}</p>
                 </li>
             </ul>
         </div>

@@ -222,3 +222,17 @@
     opacity: 0.85;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .textclass {
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .webflixloader{
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+  }
+}

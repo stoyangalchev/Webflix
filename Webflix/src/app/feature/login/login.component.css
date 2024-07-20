@@ -70,3 +70,55 @@ app-error-message{
     left: 10em;
     color: red;
 }
+
+@media screen and (max-width: 900px) {
+    .login {
+        font-size: 1em;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .login .header h3 {
+        font-size: 1.5em;
+        text-align: center;
+        padding-bottom: 100%;
+    }
+
+    .login .fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login .field {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .login .field label {
+        font-size: 1em;
+    }
+
+    .login .field input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .login .error {
+        font-size: 0.9em;
+        color: red;
+    }
+
+    .login .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login .button input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+}

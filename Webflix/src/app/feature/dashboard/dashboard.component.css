@@ -1,72 +1,77 @@
-
-.recent-posts{
+.recent-posts {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    background-color: rgba(0, 0, 0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 3em;
     height: 100%;
-    
+
 }
 
-.recent-posts .info{
-    
+.recent-posts .info {
+
     display: flex;
     justify-content: center;
     width: 100%;
     color: hsl(2, 100%, 50%)
-    
 }
-.recent-posts .info h3{
+
+.recent-posts .info h3 {
     margin-bottom: 0;
     text-transform: uppercase;
 }
-.card-list{
+
+.card-list {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
     justify-content: center;
     gap: 2em;
-   
-    
 
-   
+
+
+
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25em;
     background-color: #E50914;
-   border-radius: 20px;
-   
+    border-radius: 20px;
+
     border: 1px solid #ed0000;
-  border-radius: 1em;
-  box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
-  margin: 1em auto;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
+    margin: 1em auto;
 }
-.card .media{
+
+.card .media {
     width: 100%;
     height: 30em;
     display: flex;
     margin-bottom: 0.5em;
-   border-radius: 20px;
+    border-radius: 20px;
 }
-.card .media img{
+
+.card .media img {
     display: block;
     max-width: 100%;
     height: auto;
-   border-radius: 20px;
+    border-radius: 20px;
 }
-.card .card-info{
+
+.card .card-info {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-   border-radius: 20px;
+    border-radius: 20px;
 }
-.card .card-info a{
+
+.card .card-info a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -78,32 +83,39 @@
     border: none;
     letter-spacing: 0.2em;
     font-weight: bold;
-   border-radius: 20px;
-    
+    border-radius: 20px;
+
 }
-.card .card-info a:hover{
+
+.card .card-info a:hover {
     color: black;
     cursor: pointer;
     background-color: antiquewhite;
-   border-radius: 20px;
+    border-radius: 20px;
 }
-.card .card-info h3{
+
+.card .card-info h3 {
     margin-bottom: 1em;
-   border-radius: 20px;
+    border-radius: 20px;
 }
 
 .recentMovieTxt {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 8em;
-  font-weight: bold;
-  margin-top: -50px;
-  margin-bottom: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: -webkit-linear-gradient(#e50914, #f00000);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  z-index: 1;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 8em;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(#e50914, #f00000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
 
 }
 
+@media screen and (max-width: 900px) {
+    .recentMovieTxt {
+        font-size: 6rem;
+    }
+}

@@ -1,55 +1,65 @@
-.movie-create{
+.movie-create {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
 }
-.movie-create form{
+
+.movie-create form {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     min-width: 50em;
-    background-color: rgba(0, 0, 0,0.6);
-    color:#ed0000;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ed0000;
     min-height: 20em;
     border-radius: 1em;
     padding: 1em 0;
     gap: 2em;
 }
-.movie-create form .header{
+
+.movie-create form .header {
     position: relative;
 }
-.movie-create form app-error-message{
+
+.movie-create form app-error-message {
     position: absolute;
 }
-.movie-create form h3{
+
+.movie-create form h3 {
     font-size: 3em;
     text-transform: uppercase;
     margin-bottom: 0;
 }
-.movie-create form .fields{
+
+.movie-create form .fields {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.movie-create form .fields .field{
+
+.movie-create form .fields .field {
     display: flex;
     gap: 2em;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
-.movie-create form .fields .field label{
+
+.movie-create form .fields .field label {
     font-size: 1.5em;
 }
-.movie-create form .fields .field input{
+
+.movie-create form .fields .field input {
     min-width: 20em;
     min-height: 2em;
     border: 2px solid #ed0000;
     border-radius: 0.5em;
 }
-.movie-create form .fields .field textarea{
+
+.movie-create form .fields .field textarea {
     resize: none;
     min-width: 20em;
     height: 10em;
@@ -57,19 +67,21 @@
     border-radius: 0.5em;
 }
 
-.movie-create form .fields .button input{
+.movie-create form .fields .button input {
     background-color: black;
     color: #ed0000;
     border: 1px solid #ed0000;
     padding: 0.5em 1em;
     font-size: 1.5em;
 }
-.movie-create form .fields .button input:hover{
+
+.movie-create form .fields .button input:hover {
     color: white;
     border-color: white;
     cursor: pointer;
 }
-.error{
+
+.error {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -77,9 +89,22 @@
     left: 0;
     color: red;
 }
-.error-long{
+
+.error-long {
     width: 7em;
     position: absolute;
     top: 4em;
     left: 0;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    input {
+            width: 30%;
+        }
+    
+        .button {
+            width: 100%;
+        }
 }
