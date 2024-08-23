@@ -2,9 +2,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -29,7 +31,7 @@
   color: #ed0000;
   text-shadow: 20px 10px 2px #000000;
   transition: color 0.5s ease-in-out;
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .error h2 span {
@@ -40,4 +42,77 @@
 .error h2:hover,
 .error h1:hover {
   color: #ff0000;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 50px;
+  }
+
+  .error h2 span {
+    font-size: 250px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 40px;
+  }
+
+  .error h2 span {
+    font-size: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 20px;
+  }
+
+  .error h2 span {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 18px;
+  }
+
+  .error h2 span {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 13px;
+  }
+
+  .error h2 span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+
+  .error h2,
+  .error h1 {
+    font-size: 9px;
+  }
+
+  .error h2 span {
+    font-size: 18px;
+  }
 }

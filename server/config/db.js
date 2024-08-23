@@ -1,11 +1,12 @@
-const config = require('./config');
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const config = require("./config");
 
-module.exports = () => {
-  return mongoose.connect(config.dbURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  });
+module.exports = async () => {
+  try {
+    await mongoose.connect(config.dbURL);
+    console.log("MongoDB connected...");
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+    throw error;
+  }
 };

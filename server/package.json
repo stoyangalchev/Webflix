@@ -4,33 +4,25 @@
   "description": "REST-api for back-end of React project",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "nodemon": "nodemon .", 
+    "start": "nodemon .",
+    "nodemon": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BoogyHS/REST-api.git"
+    "type": "git"
   },
   "keywords": [
     "rest-api"
   ],
-  "author": "BoogyHS",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BoogyHS/REST-api/issues"
-  },
-  "homepage": "https://github.com/BoogyHS/REST-api#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
-    "cookie-parser": "^1.4.5",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.19"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.3",
+    "nodemon": "^3.1.4"
   }
 }

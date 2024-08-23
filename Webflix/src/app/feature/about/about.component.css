@@ -32,7 +32,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: perspective(100px) rotateX(10deg);
   margin-bottom: 10px;
-
   animation: bounce 2s infinite;
 }
 
@@ -77,7 +76,6 @@ h1 {
   text-shadow: 11px 7px 11px rgba(0, 0, 0, 0.5);
   transform: perspective(100px) rotateX(10deg);
   margin-bottom: 9px;
-  
   animation: pulse 2s infinite;
 }
 
@@ -95,20 +93,93 @@ h1 {
   }
 }
 
- @media screen and (max-width: 900px) {
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
   .fancyDivAbout {
-      padding: 30px;
-      margin:30px;
-      justify-content: center;
-      text-align: center;
-  }
-  .titleabout{
-    font-size: 3em;
-    
+    max-width: 700px;
+    padding: 25px;
   }
 
-  .cooltitle{
+  .fancyDivAbout h3 {
+    font-size: 2.5em;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .fancyDivAbout {
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .fancyDivAbout h3 {
     font-size: 2em;
+  }
 
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fancyDivAbout {
+    max-width: 380px;
+    padding: 20px;
+  }
+
+  .fancyDivAbout h3 {
+    font-size: 1.8em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .fancyDivAbout {
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .fancyDivAbout h3 {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .fancyDivAbout {
+    max-width: 250px;
+    padding: 5px;
+  }
+
+  .fancyDivAbout h3 {
+    font-size: 1.2em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .fancyDivAbout {
+    max-width: 200px;
+    padding: 2px;
+  }
+
+  .fancyDivAbout h3 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.2em;
   }
 }

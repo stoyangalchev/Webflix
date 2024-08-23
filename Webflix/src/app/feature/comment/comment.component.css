@@ -79,3 +79,32 @@ form .form button {
 form .form button:hover {
     background-color: #c30000;
 }
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 1em;
+    }
+
+    .form {
+        gap: 1em;
+    }
+
+    form .form label {
+        font-size: 1.5em;
+    }
+
+    form .form textarea {
+        height: 100px;
+        font-size: 0.9em;
+    }
+
+    form .form input {
+        font-size: 0.9em;
+        padding: 0.6em 1em;
+    }
+
+    form .form button {
+        font-size: 0.9em;
+        padding: 0.6em 1.2em;
+    }
+}

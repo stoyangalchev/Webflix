@@ -6,15 +6,13 @@
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 3em;
     height: 100%;
-
 }
 
 .recent-posts .info {
-
     display: flex;
     justify-content: center;
     width: 100%;
-    color: hsl(2, 100%, 50%)
+    color: hsl(2, 100%, 50%);
 }
 
 .recent-posts .info h3 {
@@ -28,10 +26,6 @@
     width: 90%;
     justify-content: center;
     gap: 2em;
-
-
-
-
 }
 
 .card {
@@ -41,7 +35,6 @@
     width: 25em;
     background-color: #E50914;
     border-radius: 20px;
-
     border: 1px solid #ed0000;
     border-radius: 1em;
     box-shadow: 0 0 1em 0 rgba(244, 185, 83, 0.6);
@@ -84,7 +77,6 @@
     letter-spacing: 0.2em;
     font-weight: bold;
     border-radius: 20px;
-
 }
 
 .card .card-info a:hover {
@@ -111,11 +103,73 @@
     -webkit-text-fill-color: transparent;
     position: relative;
     z-index: 1;
+}
 
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .card {
+        width: 20em;
+    }
+
+    .card .media {
+        height: 25em;
+    }
+
+    .card .card-info a {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card-list {
+        width: 100%;
+    }
+
+    .card {
+        width: 18em;
+    }
+
+    .card .media {
+        height: 20em;
+    }
+
+    .card .card-info a {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .recent-posts {
+        padding-top: 2em;
+    }
+
+    .card {
+        width: 15em;
+    }
+
+    .card .media {
+        height: 15em;
+    }
+
+    .card .card-info a {
+        width: 200px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .recentMovieTxt {
         font-size: 4rem;
+    }
+
+    .card {
+        width: 12em;
+    }
+
+    .card .media {
+        height: 12em;
+    }
+
+    .card .card-info a {
+        width: 150px;
     }
 }
