@@ -22,7 +22,9 @@ dbConnector()
     app.use("/", apiRouter);
 
     app.use(errorHandler);
-
+    app.get("/", (req, res) => {
+      res.send("<h1>Server is Online /</h1>");
+    });
     app.listen(3000, () => {
       console.log("Server running at http://localhost:3000/");
     });
