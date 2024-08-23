@@ -23,16 +23,4 @@ Webflix/.angular/cache/16.2.12/angular-webpack/326b6ea28346e0e277ee4c2a22228d3e5
 *.old
 *.old
 *.pack
-.DS_Store
-node_modules
-.git
-dist
-src
-.vscode
-.vercel
-.gitignore
-angular.json
-package.json
-tsconfig.json
-tsconfig.app.json
-tsconfig.spec.json
+
