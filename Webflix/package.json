@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
     "dotenv": "^16.4.5",
+    "e2e": "^0.0.8",
     "moment": "^2.29.4",
     "ngx-cookie-service": "^16.0.0",
     "rxjs": "~7.8.0",
