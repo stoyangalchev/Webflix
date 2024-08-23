@@ -1,3 +1,4 @@
 export const environment = {
-  apiUrl: "http://localhost:3000/api",
+  apiUrl: "https://webflix-jri1.onrender.com",
+  // apiUrl: "http://localhost:3000/api",
 };
