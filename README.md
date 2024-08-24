@@ -6,7 +6,7 @@ This project is a Single Page Application (SPA) crafted with love using Angular 
 
 🚀 Deployed With GitHub Pages<br>
 .................................................................<br>
-
+![App Screenshot](./screenshots/Home%20Page.png)
 CLICK HERE TO EXPLORE! 🎉<br>
 https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home<br>
 .................................................................<br>
