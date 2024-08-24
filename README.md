@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Deployed With GitHub Pages
 .................................................................
-###### CLICK HERE --> 'https://stoyangalchev.github.io/Webflix/'
+###### CLICK HERE --> 'https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app'
 .................................................................
 ## Development server
 
