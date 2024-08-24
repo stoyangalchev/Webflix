@@ -4,7 +4,7 @@ const config = {
   dbURL: process.env.DB_URL_CREDENTIALS,
 
   credentials: true,
-  origin: "*", // Allow all origins for testing purposes
+  origin: ["https://webflix-chi.vercel.app"],
   allowedHeaders: ["Content-Type", "X-Authorization"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
