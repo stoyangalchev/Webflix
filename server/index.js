@@ -10,12 +10,14 @@ dbConnector()
     const app = require("express")();
     require("./config/express")(app);
 
-    app.use(
-      cors({
-        origin: config.origin,
-        credentials: true,
-      })
-    );
+   app.use(
+     cors({
+       origin: ["https://webflix-jri1.onrender.com", "http://localhost:4200"],
+       credentials: true,
+       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+       allowedHeaders: ["Content-Type", "X-Authorization"],
+     })
+   );
 
     app.use("/", apiRouter);
 
