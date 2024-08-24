@@ -17,6 +17,7 @@ const config = {
     "http://localhost:4200",
     "https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app",
     "https://webflix-oc7q38bdk-stoyans-projects-1eda22f1.vercel.app",
+    "https://webflix-chi.vercel.app/",
   ],
 };
 
