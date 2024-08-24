@@ -16,6 +16,7 @@ const config = {
     "https://webflix-jri1.onrender.com",
     "http://localhost:4200",
     "https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app",
+    "https://webflix-oc7q38bdk-stoyans-projects-1eda22f1.vercel.app",
   ],
 };
 
@@ -48,10 +49,10 @@ dbConnector()
       })
     );
 
-  app.use((req, res, next) => {
-    console.log(`Incoming request from origin: ${req.headers.origin}`);
-    next();
-  });
+    app.use((req, res, next) => {
+      console.log(`Incoming request from origin: ${req.headers.origin}`);
+      next();
+    });
 
     app.use("/", apiRouter);
 
