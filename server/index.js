@@ -13,6 +13,7 @@ const { errorHandler } = require("./utils");
 const config = {
   dbURL: process.env.DB_URL_CREDENTIALS,
   origin: [
+    "*", // Allow all origins for tests
     "https://webflix-jri1.onrender.com",
     "http://localhost:4200",
     "https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app",
