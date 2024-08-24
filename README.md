@@ -1,62 +1,49 @@
-# Webflix
+🎥 Webflix 🎥
+Welcome to Webflix – your go-to platform for sharing and discussing your favorite movies! 🍿🎬
 
-Webflix is a Single Page Application about sharing favorite movies and comment it.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16
+This project is a Single Page Application (SPA) crafted with love using Angular CLI version 16. It’s all about discovering great films and sharing your thoughts with a vibrant community.
 
-# Deployed With GitHub Pages
+🚀 Deployed With GitHub Pages
 .................................................................
-###### CLICK HERE --> 'https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app'
+
+CLICK HERE TO EXPLORE! 🎉
+https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home
 .................................................................
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
-The application will automatically reload if you change any of the source files.
+🛠️ Development server
+To start the dev server, run ng serve and head over to http://localhost:4200/. The app will automatically reload as you modify the source files. 📂✨
 
-# Server
+🌐 Server
+Start the REST-API server with npm start. This app utilizes a REST-API provided for the Angular course at SoftUni. For more details, check out the README.md in the "server" folder. 📑
 
-Run `npm start` for starting REST-api server.
-The application uses REST-api for Angular course in SoftUni.
-For more information read the README.md in folder "server".
+📄 Pages
+🏠 Home page
+A dynamic homepage featuring the app title, a brief description, and the three most recent movies added. Perfect for quick inspiration! 🎥🔥
 
-## Home page
+🎞️ Movies page
+Browse a dynamic collection of movies shared by users. Each movie entry includes brief details and a Details button for more in-depth information. 🧐
 
-Dynamic page with app title, short description of the Application and 3 recent movies added.
+🔐 Login page
+Guests can log in using their username and password. Welcome back! 😊
 
-## Movies page
+📝 Register page
+New here? Register with a username, email, age, and password. For security, re-enter your password for validation. 🔒
 
-Dynamic page with  collection of all created movies by the users. Contains breef information
-about every movie and a Details button for more information about the chosen movie.
+ℹ️ About Page
+Get to know how to use Webflix with our handy instructions. 💡
 
-## Login page
+👤 Profile Page
+A dynamic page showcasing your profile image, user details, and the movies you’ve added to Webflix. It’s all about you! 😎
 
-Guest can login with username and password.
+➕ Add Movie page
+Registered users can add new movies using simple input fields. All fields are required to ensure a complete experience! 🎬✨
 
-## Register page
+🔍 Details page
+Whether you're a guest or a registered user, you can explore movie details and read user comments. Registered users can also post comments, and if you’re the creator of the movie, you can edit or delete it. 📝❌
 
-Guest can register with username, email, age and password. Required to repeat the password for validation.
+✏️ Edit page
+Only registered users and the original creators of a movie can edit its details. Keep your listings up to date! 🛠️
 
-## About Page
+🚪 Logout
+Logged-in users can log out from their session anytime. Until next time! 👋
 
-Instruction to use the Application .
-
-## Profile Page
-
-Dinamic page with profile image, user details  and movies aded by current user.
-
-
-## Add Movie page
-
-It's only accessible for Registered users. They can add movie thrue input fields. All fields are required!
-
-## Details page
-
-Accessible both guests and register users. Guest can only see details of the movie and movie comments.
-Register users can posts comments. Register user and owner of the created movie can Edit and Delete the movie.
-
-## Edit page
-
-Only Registed users and owners of the movie can edit the information about the movie.
-
-## Logout
-
-Logged users can logout from their session.
