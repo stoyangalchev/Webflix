@@ -18,6 +18,7 @@ const config = {
     "https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app",
     "https://webflix-oc7q38bdk-stoyans-projects-1eda22f1.vercel.app",
     "https://webflix-chi.vercel.app/",
+    "https://webflix-stoyans-projects-1eda22f1.vercel.app/",
   ],
 };
 
