@@ -12,7 +12,11 @@ const { errorHandler } = require("./utils");
 
 const config = {
   dbURL: process.env.DB_URL_CREDENTIALS,
-  origin: ["https://webflix-jri1.onrender.com", "http://localhost:4200"],
+  origin: [
+    "https://webflix-jri1.onrender.com",
+    "http://localhost:4200",
+    "https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app",
+  ],
 };
 
 const dbConnector = async () => {
@@ -44,15 +48,10 @@ dbConnector()
       })
     );
 
-    // Middleware to catch CORS errors
-    app.use((err, req, res, next) => {
-      if (err && err.name === "CorsError") {
-        console.error("CORS error:", err.message);
-        res.status(500).json({ message: "CORS error", error: err.message });
-      } else {
-        next(err);
-      }
-    });
+  app.use((req, res, next) => {
+    console.log(`Incoming request from origin: ${req.headers.origin}`);
+    next();
+  });
 
     app.use("/", apiRouter);
 
