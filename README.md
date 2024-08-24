@@ -1,15 +1,15 @@
-🎥 Webflix 🎥
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Welcome to Webflix – your go-to platform for sharing and discussing your favorite movies! 🍿🎬
+🎥 Webflix 🎥<br>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><br>
+Welcome to Webflix – your go-to platform for sharing and discussing your favorite movies! 🍿🎬<br>
 
 This project is a Single Page Application (SPA) crafted with love using Angular CLI version 16. It’s all about discovering great films and sharing your thoughts with a vibrant community.
 
-🚀 Deployed With GitHub Pages
-.................................................................
+🚀 Deployed With GitHub Pages<br>
+.................................................................<br>
 
-CLICK HERE TO EXPLORE! 🎉
-https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home
-.................................................................
+CLICK HERE TO EXPLORE! 🎉<br>
+https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home<br>
+.................................................................<br>
 
 🛠️ Development server
 To start the dev server, run ng serve and head over to http://localhost:4200/. The app will automatically reload as you modify the source files. 📂✨
