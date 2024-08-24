@@ -1,0 +1,10 @@
+node_modules
+*.log
+*.md
+*.mp4
+*.zip
+*.tar.gz
+*.jpg
+*.png
+*.gif
+*.pdf
