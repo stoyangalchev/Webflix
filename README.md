@@ -47,4 +47,4 @@ Only registered users and the original creators of a movie can edit its details.
 
 ## 🚪 Logout
 Logged-in users can log out from their session anytime. Until next time! 👋
-### !!! You have to wait until the server returns a response, we apologize for the inconvenience, the reason for the delay comes from the free test plan of the Mongo DB Atlas cluster.
+## ⏰ !!! You have to wait until the server returns a response, we apologize for the inconvenience, the reason for the delay comes from the free test plan of the Mongo DB Atlas cluster.
