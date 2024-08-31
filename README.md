@@ -8,7 +8,7 @@ This project is a Single Page Application (SPA) crafted with love using Angular 
 
 ![App Screenshot](./screenshots/Home%20Page.png)
 
-## 🎉 [Click this link](https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home)<br>
+## 🎉Deployment here -> [Click this link](https://webflix-9znqh0fxb-stoyans-projects-1eda22f1.vercel.app/home)<br>
 
 
 ## 🛠️ Development server
