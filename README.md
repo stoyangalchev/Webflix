@@ -14,6 +14,11 @@ This project is a Single Page Application (SPA) crafted with love using Angular 
 ## 🛠️ Development server
 To start the dev server, run ng serve and head over to http://localhost:4200/. The app will automatically reload as you modify the source files. 📂✨
 
+## To log in and test the app, Register to app:
+
+- **Username**: `e.g. johndoe`
+- **Password**: `e.g. *password*`
+  
 ## 🌐 Server
 Start the REST-API server with npm start. This app utilizes a REST-API provided for the Angular course at SoftUni. For more details, check out the README.md in the "server" folder. 📑
 
