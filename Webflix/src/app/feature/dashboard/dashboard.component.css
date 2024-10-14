@@ -173,3 +173,39 @@
         width: 150px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .card-list {
+        gap: 1em;
+    }
+
+    .card {
+        width: 10em;
+    }
+
+    .card .media {
+        height: 10em;
+    }
+
+    .card .card-info a {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .card-list {
+        gap: 0.5em;
+    }
+
+    .card {
+        width: 8em;
+    }
+
+    .card .media {
+        height: 8em;
+    }
+
+    .card .card-info a {
+        width: 100px;
+    }
+}
